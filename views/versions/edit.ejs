@@ -1,0 +1,32 @@
+<ul class="breadcrumb">
+    <li>
+        <a href="/">Home</a> <span class="divider">/</span>
+    </li>
+    <li>
+        <a href="/Versions">Versions</a> <span class="divider">/</span>
+    </li>
+    <li class="active">Edit</li>
+</ul>
+
+<h1><%= title %></h1>
+<div id="version-list" class="k-content">
+    <form class="form-vertical" method="post" action="/version/save/<%= version._id%>">
+        <div class="control-group">
+            <label class="control-label" for="name">Name</label>
+            <div class="controls">
+                <input id="name" class="input-xlarge span3" name="version[name]" type="text" value="<%= version.name %>">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="versionnumber">Version number</label>
+            <div class="controls">
+                <input id="tags" class="input-xlarge span3" name="version[versionnumber]" type="text" value="<%= version.versionnumber %>">
+            </div>
+        </div>
+        <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Save changes</button>
+            <a class="btn" href="/Versions">Cancel</a>
+        </div>
+        <input name="_method" value="PUT" type="hidden" />
+    </form>
+</div>

@@ -1,0 +1,42 @@
+<ul class="breadcrumb">
+  <li>
+    <a href="/">Home</a> <span class="divider">/</span>
+  </li>
+    <li class="active">Versions</li>
+</ul>
+
+
+<h1><%= title %></h1>
+<div id="version-list" class="k-content">
+    <table id="grid">
+        <thead>
+            <tr>
+                <th class="actionsColumn"></th>
+                <th data-field="name">Name</th>
+                <th data-field="version">Version Number</th>
+            </tr>
+        </thead>
+        <tbody>
+             <% for(var i=0; i<versionList.length; i++) { %>
+                <tr>
+                    <td class="actionsColumn">
+                        <a href="/version/edit/<%= versionList[i]._id%>">edit</a>&nbsp;&nbsp;
+                        <a href="/version/delete/<%= versionList[i]._id%>">delete</a>&nbsp;&nbsp;
+                    </td>
+                    <td><%= versionList[i].name %></td>
+                    <td><%= versionList[i].versionnumber %></td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</div>
+<div id="version-create" class="createwrapper">
+    <a class="btn btn-primary btn-large" href="/version/create">Create a new Sitefinity version</a>
+</div>
+<script>
+    $(document).ready(function() {
+        $("#grid").kendoGrid({
+            height: 250
+        });
+    });
+</script>

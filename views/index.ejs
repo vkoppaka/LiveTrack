@@ -1,0 +1,85 @@
+<div class="container">
+    <h1><%= title %></h1>
+    <!-- Main hero unit for a primary marketing message or call to action -->
+    <div class="hero-unit">
+        <h1>Welcome to LiveTrack!</h1>
+        <p>A wesite built on Node.js, MongoDb, EJS, Twitter Bootstrap and Kendo to keep track of live sites that run <a href="http://sitefinity.com">Sitefinity</a>
+            <a href="http://sitefinity.com/ecommerce">Ecommerce</a> </p>
+        <p><a class="btn btn-primary btn-large" href="/sites">Get a list of live sites &raquo;</a></p>
+    </div>
+    <div class="page-header">
+        <h1>Number of sites currently live</h1>
+        <div id="gauge-container">
+            <div id="gauge"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span4">
+            <h2>Sites</h2>
+            <p>List of sites that use Sitefinity Ecommerce to operate their store online.</p>
+            <p><a class="btn" href="/sites">View details &raquo;</a></p>
+        </div>
+        <div class="span4">
+            <h2>Versions</h2>
+            <p>Admin area where you can view, create, update versions information of Sitefinity. </p>
+            <p><a class="btn" href="/versions">View details &raquo;</a></p>
+        </div>
+        <div class="span4">
+            <h2>Reports</h2>
+            <p>Reports that show shiny graphs built with Kendo Datawiz and Kendo web.</p>
+            <p><a class="btn" href="reports">View details &raquo;</a></p>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        createGauge();
+    });
+    function getNumberOfLiveSites() {
+        var numberOfLiveSites = 10;
+        $.ajax({
+            async: false,
+            type: 'GET',
+            cache: false,
+            url: '/sites/api/numberoflivesites',
+            success: function(data) {
+                numberOfLiveSites = data;
+            }
+        });
+        return numberOfLiveSites;
+    }
+    function createGauge() {
+        $("#gauge").kendoRadialGauge({
+            theme: $(document).data("kendoSkin") || "default",
+
+            pointer: {
+                value: getNumberOfLiveSites()
+            },
+
+            scale: {
+                minorUnit: 1,
+                majorUnit: 5,
+                startAngle: -30,
+                endAngle: 210,
+                max: 25,
+                ranges: [
+                                                          {
+                                                              from: 0,
+                                                              to: 15,
+                                                              color: "#00ab00" //green
+                                                          }, {
+                                                              from: 15,
+                                                              to: 20,
+                                                              color: "#d3ce37" //yellow
+                                                          }, {
+                                                              from: 20,
+                                                              to: 25,
+                                                              color: "#ae130f" //red
+                                                          }
+                                                        ]
+            }
+        });
+    }
+    
+</script>

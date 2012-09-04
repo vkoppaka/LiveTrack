@@ -1,0 +1,67 @@
+Express server listening on port NaN in development mode
+ReferenceError: errorHandler is not defined
+    at C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\routes\global.js:15:19
+    at callbacks (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\lib\router\index.js:272:11)
+    at param (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\lib\router\index.js:246:11)
+    at pass (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\lib\router\index.js:253:5)
+    at Router._dispatch (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\lib\router\index.js:280:5)
+    at Object.middleware [as handle] (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\lib\router\index.js:45:10)
+    at next (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\node_modules\connect\lib\http.js:204:15)
+    at Object.methodOverride [as handle] (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\node_modules\connect\lib\middleware\methodOverride.js:35:5)
+    at next (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\node_modules\connect\lib\http.js:204:15)
+    at Object.bodyParser [as handle] (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\node_modules\connect\lib\middleware\bodyParser.js:88:61)
+ReferenceError: errorHandler is not defined
+    at C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\routes\global.js:15:19
+    at callbacks (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\lib\router\index.js:272:11)
+    at param (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\lib\router\index.js:246:11)
+    at pass (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\lib\router\index.js:253:5)
+    at Router._dispatch (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\lib\router\index.js:280:5)
+    at Object.middleware [as handle] (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\lib\router\index.js:45:10)
+    at next (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\node_modules\connect\lib\http.js:204:15)
+    at Object.methodOverride [as handle] (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\node_modules\connect\lib\middleware\methodOverride.js:35:5)
+    at next (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\node_modules\connect\lib\http.js:204:15)
+    at Object.bodyParser [as handle] (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\node_modules\connect\lib\middleware\bodyParser.js:88:61)
+ReferenceError: errorHandler is not defined
+    at C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\routes\global.js:15:19
+    at callbacks (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\lib\router\index.js:272:11)
+    at param (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\lib\router\index.js:246:11)
+    at pass (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\lib\router\index.js:253:5)
+    at Router._dispatch (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\lib\router\index.js:280:5)
+    at Object.middleware [as handle] (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\lib\router\index.js:45:10)
+    at next (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\node_modules\connect\lib\http.js:204:15)
+    at Object.methodOverride [as handle] (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\node_modules\connect\lib\middleware\methodOverride.js:35:5)
+    at next (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\node_modules\connect\lib\http.js:204:15)
+    at Object.bodyParser [as handle] (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\node_modules\connect\lib\middleware\bodyParser.js:88:61)
+ReferenceError: errorHandler is not defined
+    at C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\routes\global.js:15:19
+    at callbacks (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\lib\router\index.js:272:11)
+    at param (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\lib\router\index.js:246:11)
+    at pass (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\lib\router\index.js:253:5)
+    at Router._dispatch (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\lib\router\index.js:280:5)
+    at Object.middleware [as handle] (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\lib\router\index.js:45:10)
+    at next (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\node_modules\connect\lib\http.js:204:15)
+    at Object.methodOverride [as handle] (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\node_modules\connect\lib\middleware\methodOverride.js:35:5)
+    at next (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\node_modules\connect\lib\http.js:204:15)
+    at Object.bodyParser [as handle] (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\node_modules\connect\lib\middleware\bodyParser.js:88:61)
+ReferenceError: errorHandler is not defined
+    at C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\routes\global.js:15:19
+    at callbacks (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\lib\router\index.js:272:11)
+    at param (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\lib\router\index.js:246:11)
+    at pass (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\lib\router\index.js:253:5)
+    at Router._dispatch (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\lib\router\index.js:280:5)
+    at Object.middleware [as handle] (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\lib\router\index.js:45:10)
+    at next (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\node_modules\connect\lib\http.js:204:15)
+    at Object.methodOverride [as handle] (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\node_modules\connect\lib\middleware\methodOverride.js:35:5)
+    at next (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\node_modules\connect\lib\http.js:204:15)
+    at Object.bodyParser [as handle] (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\node_modules\connect\lib\middleware\bodyParser.js:88:61)
+ReferenceError: errorHandler is not defined
+    at C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\routes\global.js:15:19
+    at callbacks (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\lib\router\index.js:272:11)
+    at param (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\lib\router\index.js:246:11)
+    at pass (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\lib\router\index.js:253:5)
+    at Router._dispatch (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\lib\router\index.js:280:5)
+    at Object.middleware [as handle] (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\lib\router\index.js:45:10)
+    at next (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\node_modules\connect\lib\http.js:204:15)
+    at Object.methodOverride [as handle] (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\node_modules\connect\lib\middleware\methodOverride.js:35:5)
+    at next (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\node_modules\connect\lib\http.js:204:15)
+    at Object.bodyParser [as handle] (C:\Users\subbarao\Documents\My Web Sites\NodeProjects\LiveTrack\node_modules\express\node_modules\connect\lib\middleware\bodyParser.js:88:61)

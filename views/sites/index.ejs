@@ -1,0 +1,55 @@
+<ul class="breadcrumb">
+  <li>
+    <a href="/">Home</a> <span class="divider">/</span>
+  </li>
+    <li class="active">Sites</li>
+</ul>
+
+<h1><%= title %></h1>
+<div id="site-list" class="k-content">
+    <table id="grid">
+        <thead>
+            <tr>
+                <th class="actionsColumn"></th>
+                <th data-field="name">Name</th>
+                <th data-field="url">Site Url</th>
+                <th data-field="version">Sitefinity Version</th>
+                <th data-field="comments">Comments</th>
+                <th data-field="tags">Tags</th>
+            </tr>
+        </thead>
+        <tbody>
+             <% for(var i=0; i<siteList.length; i++) { %>
+                <tr>
+                    <td class="actionsColumn">
+                        <a href="/site/edit/<%= siteList[i]._id%>">edit</a>&nbsp;&nbsp;
+                        <a href="/site/delete/<%= siteList[i]._id%>">delete</a>&nbsp;&nbsp;
+                    </td>
+                    <td><%= siteList[i].name %></td>
+                    <td><a href="<%= siteList[i].url %>" target="_blank"><%= siteList[i].url %></a></td>
+                    <td><%= siteList[i].version %></td>
+                    <td><%= siteList[i].comments %></td>
+                    <td>
+                        <% var splitTags = siteList[i].tags.split(","); %>
+                        <% for(var j=0; j< splitTags.length; j++) {%>
+                            <a href="/sites/bytag/<%= splitTags[j] %>" class="label label-info"><%= splitTags[j]%></a>
+                        <% } %>
+                    
+                    </td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</div>
+<div id="site-create" class="createwrapper">
+    <a class="btn btn-primary btn-large" href="/site/create">Create a new site</a>
+</div>
+<script>
+    $(document).ready(function() {
+        $("#grid").kendoGrid({
+            height: 250
+        });
+    });
+</script>
+
+

@@ -1,0 +1,77 @@
+<ul class="breadcrumb">
+    <li>
+        <a href="/">Home</a> <span class="divider">/</span>
+    </li>
+    <li>
+        <a href="/Sites">Sites</a> <span class="divider">/</span>
+    </li>
+    <li class="active">Edit</li>
+</ul>
+
+<h1><%= title %></h1>
+<div id="site-list" class="k-content">
+    <form class="form-vertical" method="post" action="/site/save/<%= site._id%>">
+        <div class="control-group">
+            <label class="control-label" for="name">Name</label>
+            <div class="controls">
+                <input id="name" class="input-xlarge span3" name="site[name]" type="text" value="<%= site.name %>">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="siteurl">Site Url</label>
+            <div class="controls">
+                <div class="input-prepend">
+                    <span class="add-on">http://</span><input id="prependedInput" class="input-xlarge span3" id="siteurl" name="site[siteurl]" type="text" value="<%= site.url %>">
+                </div>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="sfversion">Sitefinity Version</label>
+            <div class="controls">
+                       <% 
+                        var choices = [ 
+                                {value: 1,text: 'First Choice' }, 
+                                {value: 2,text: 'Second Choice'},
+                                {value: 3,text: 'Third Choice'}  
+                            ]
+                        %>
+                    <%= select_tag('mySelectElement', choices) %>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="comments">Comments</label>
+            <div class="controls">
+                <textarea id="comments" class="input-xlarge" rows="3" name="site[comments]"><%= site.comments %></textarea>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="tags">Tags</label>
+            <div class="controls">
+                <input id="tags" class="input-xlarge" placeholder="start typing for exsisting tags..." name="site[tags]" type="text" value="<%= site.tags %>">
+            </div>
+        </div>
+        <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Save changes</button>
+            <a class="btn" href="/Sites">Cancel</a>
+        </div>
+    </form>
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#tags").kendoAutoComplete({
+            dataTextField: "name",
+            dataSource: {
+                type: "json",
+                transport: {
+                    read: "/tags/api/all"
+                }
+            },
+            separator: ", "
+        });
+    });
+    
+</script>
+
+</script>

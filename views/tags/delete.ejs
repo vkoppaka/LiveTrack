@@ -1,0 +1,26 @@
+<ul class="breadcrumb">
+    <li>
+        <a href="/">Home</a> <span class="divider">/</span>
+    </li>
+    <li>
+        <a href="/Tags">Tags</a> <span class="divider">/</span>
+    </li>
+    <li class="active">Delete</li>
+</ul>
+
+<h1><%= title %></h1>
+<div id="tag-list" class="k-content">
+    <form class="form-vertical" method="post" action="/tag/delete/<%= tag._id %>">
+        <div class="control-group">
+            <label class="control-label" for="name">Name</label>
+            <div class="controls">
+                <input id="name" class="input-xlarge span3" name="tag[name]" type="text" value="<%= tag.name %>">
+            </div>
+        </div>
+        <div class="form-actions">
+            <button class="btn btn-danger" type="submit">Delete</button>
+            <a class="btn" href="/Tags">Cancel</a>
+        </div>
+        <input name="_method" value="DELETE" type="hidden" />
+    </form>
+</div>

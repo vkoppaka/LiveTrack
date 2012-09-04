@@ -1,0 +1,39 @@
+<ul class="breadcrumb">
+  <li>
+    <a href="/">Home</a> <span class="divider">/</span>
+  </li>
+    <li class="active">Tags</li>
+</ul>
+
+<h1><%= title %></h1>
+<div id="tag-list" class="k-content">
+    <table id="grid">
+        <thead>
+            <tr>
+                <th class="actionsColumn"></th>
+                <th data-field="name">Name</th>
+            </tr>
+        </thead>
+        <tbody>
+             <% for(var i=0; i<tagList.length; i++) { %>
+                <tr>
+                    <td class="actionsColumn">
+                        <a href="/tag/edit/<%= tagList[i]._id%>">edit</a>&nbsp;&nbsp;
+                        <a href="/tag/delete/<%= tagList[i]._id%>">delete</a>&nbsp;&nbsp;
+                    </td>
+                    <td><%= tagList[i].name %></td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</div>
+<div id="tag-create" class="createwrapper">
+    <a class="btn btn-primary btn-large" href="/tag/create">Create a new Tag</a>
+</div>
+<script>
+    $(document).ready(function() {
+        $("#grid").kendoGrid({
+            height: 250
+        });
+    });
+</script>

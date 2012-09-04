@@ -1,0 +1,71 @@
+<ul class="breadcrumb">
+    <li>
+        <a href="/">Home</a> <span class="divider">/</span>
+    </li>
+    <li>
+        <a href="/Reports">Reports</a> <span class="divider">/</span>
+    </li>
+    <li class="active">By Version</li>
+</ul>
+
+
+<div id="example" class="k-content">
+    <div class="chart-wrapper">
+        <div id="chart"></div>
+    </div>
+</div>
+    <script type="text/javascript">
+        function createChart() {
+            $("#chart").kendoChart({
+                theme: $(document).data("kendoSkin") || "default",
+                title: {
+                    text: "Live sites by sitefinity version"
+                },
+                legend: {
+                    position: "bottom",
+                    labels: {
+                        template: "#= text # (#= value #%)"
+                    }
+                },
+                seriesDefaults: {
+                    labels: {
+                        visible: true,
+                        format: "{0}%"
+                    }
+                },
+                series: [{
+                    type: "pie",
+                    data: [ {
+                        category: "Hydro",
+                        value: 22
+                    }, {
+                        category: "Solar",
+                        value: 2
+                    }, {
+                        category: "Nuclear",
+                        value: 49
+                    }, {
+                        category: "Wind",
+                        value: 27
+                    } ]
+                }],
+                tooltip: {
+                    visible: true,
+                    format: "{0}%"
+                }
+            });
+        }
+        
+        $(document).ready(function() {
+            setTimeout(function() {
+                // Initialize the chart with a delay to make sure
+                // the initial animation is visible
+                createChart();
+        
+                $("#example").bind("kendo:skinChange", function(e) {
+                    createChart();
+                });
+            }, 400);
+        });
+    </script>
+
